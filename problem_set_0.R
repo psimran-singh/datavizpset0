@@ -65,12 +65,15 @@ summary(housing)
 # 1. Use dplyr to filter the dataset to the month of December, 2021 (202112). Use the column month_date_yyyymm to filter the data.
 # Store your filtered dataset under the name housing_dec_21
 housing_dec_21 <- housing %>% filter(month_date_yyyymm==202112)
+# We can use filter from dplyr to filter only those entries fro the time period we want.
 
 # 2. Use base R graphics to plot the median_listing_price column from housing_dec_21 with the default options. Be sure to access your data using the $ operator
 plot(housing_dec_21$median_listing_price)
+#plot() will give us a scatterplot of our data.
 
 # 3. Take your answer to the previous question and change it from a scatterplot to a histogram using the "type" argument to the plot() function. Run help(plot) if you are unclear.
 plot(housing_dec_21$median_listing_price,type="h")
+#type = 'h' is makes plot print an histogram instead of a scatterplot
 
 # 4. Pick another variable of your choice from the dataset and visualize it as you did in the previous question.
 plot(housing_dec_21$median_days_on_market,type="h")
